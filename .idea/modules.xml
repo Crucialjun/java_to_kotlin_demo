@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java_to_kotlin_demo.iml" filepath="$PROJECT_DIR$/.idea/modules/java_to_kotlin_demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/java_to_kotlin_demo.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/java_to_kotlin_demo.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/java_to_kotlin_demo.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/java_to_kotlin_demo.app.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/java_to_kotlin_demo.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/java_to_kotlin_demo.app.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/java_to_kotlin_demo.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/java_to_kotlin_demo.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java_to_kotlin_demo2.iml" filepath="$PROJECT_DIR$/.idea/modules/java_to_kotlin_demo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/java_to_kotlin_demo2.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/java_to_kotlin_demo2.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/java_to_kotlin_demo2.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/java_to_kotlin_demo2.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/java_to_kotlin_demo2.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/java_to_kotlin_demo2.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/java_to_kotlin_demo2.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/java_to_kotlin_demo2.app.unitTest.iml" />
     </modules>
   </component>
 </project>

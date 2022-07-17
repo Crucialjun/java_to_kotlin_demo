@@ -2,16 +2,10 @@ package com.sriyank.javatokotlindemo.activities
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
-import android.widget.EditText
-import com.google.android.material.textfield.TextInputLayout
 import android.os.Bundle
 import com.sriyank.javatokotlindemo.R
-import android.content.SharedPreferences
 import android.content.Intent
 import android.view.View
-import androidx.appcompat.widget.Toolbar
-import com.sriyank.javatokotlindemo.activities.DisplayActivity
-import com.sriyank.javatokotlindemo.activities.MainActivity
 import com.sriyank.javatokotlindemo.app.Constants
 import com.sriyank.javatokotlindemo.app.isNotEmpty
 
@@ -34,8 +28,8 @@ class MainActivity : AppCompatActivity() {
     fun saveName(view: View) {
         if(etName.isNotEmpty(inputLayoutName)){
             val personName = etName.text.toString()
-            val sharedPrerenced = getSharedPreferences(Constants.APP_SHARED_PREFERENCES, Context.MODE_PRIVATE)
-            val editor = sharedPrerenced.edit()
+            val sharedPreference = getSharedPreferences(Constants.APP_SHARED_PREFERENCES, Context.MODE_PRIVATE)
+            val editor = sharedPreference.edit()
             editor.putString(Constants.KEY_PERSON_NAME, personName)
             editor.apply()
         }

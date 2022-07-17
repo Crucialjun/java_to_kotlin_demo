@@ -19,6 +19,7 @@ import com.sriyank.javatokotlindemo.app.Constants
 import com.sriyank.javatokotlindemo.app.showErrorMessage
 import com.sriyank.javatokotlindemo.app.toast
 import com.sriyank.javatokotlindemo.models.Repository
+import io.realm.Realm
 import kotlinx.android.synthetic.main.activity_display.*
 import kotlinx.android.synthetic.main.header.view.*
 import retrofit2.Call
@@ -161,7 +162,15 @@ class DisplayActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
     }
 
     private fun showBookmarks() {
+        val realm = Realm.getDefaultInstance()
 
+        realm.executeTransaction(object : Realm.Transaction {
+            override fun execute(realm: Realm) {
+                displayAdapter.swap(realm.where(Repository::class.java).findAll());
+
+            }
+
+        })
     }
 
     private fun closeDrawer() {

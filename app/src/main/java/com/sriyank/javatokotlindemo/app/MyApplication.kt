@@ -1,22 +1,17 @@
-package com.sriyank.javatokotlindemo.app;
+package com.sriyank.javatokotlindemo.app
 
-import android.app.Application;
+import android.app.Application
+import io.realm.Realm
+import io.realm.RealmConfiguration
 
-import io.realm.Realm;
-import io.realm.RealmConfiguration;
-
-
-public class MyApplication extends Application {
-
-	@Override
-	public void onCreate() {
-		super.onCreate();
-		Realm.init(this); // should only be done once when app starts
-
-		RealmConfiguration config = new RealmConfiguration.Builder()
-												.name("myrealm.realm")
-												.build();
-
-		Realm.setDefaultConfiguration(config);
-	}
+class MyApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        Realm.init(this) // should only be done once when app starts
+        val config = RealmConfiguration.Builder()
+            .name("myrealm.realm")
+            .allowWritesOnUiThread(true)
+            .build()
+        Realm.setDefaultConfiguration(config)
+    }
 }

@@ -11,6 +11,7 @@ import android.net.Uri
 import android.view.View
 import com.sriyank.javatokotlindemo.app.toast
 import com.sriyank.javatokotlindemo.models.Repository
+import io.realm.Realm
 import kotlinx.android.synthetic.main.list_item.view.*
 import kotlinx.android.synthetic.main.list_item.view.txvName
 
@@ -56,7 +57,15 @@ class DisplayAdapter(context: Context, repositoryList: List<Repository>) :
 
         }
 
-        private fun bookmarkRepository(current: Repository?) {}
+        private fun bookmarkRepository(current: Repository?) {
+            current?.let {
+                val realm = Realm.getDefaultInstance()
+                realm.executeTransactionAsync(
+                    { innerRealm -> innerRealm.copyToRealmOrUpdate(current) },
+                    { context.toast("Bookmarked Successfully") })
+                { context.toast("Error occured") }
+            }
+        }
 
         init {
 
